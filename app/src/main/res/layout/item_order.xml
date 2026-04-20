@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Commande -->
         <TextView
             android:id="@+id/tvCmd"
             android:text="Commande #1"
@@ -26,7 +25,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!-- Nom client -->
         <TextView
             android:id="@+id/tvName"
             android:text="Client: Ahmed"
@@ -36,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!-- Médicaments -->
         <TextView
             android:id="@+id/tvMedications"
             android:text="Paracetamol, Vitamine C"
@@ -46,7 +43,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!-- Time -->
         <TextView
             android:id="@+id/tvTime"
             android:text="10:30"
@@ -56,7 +52,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!-- Buttons -->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_marginTop="12dp"

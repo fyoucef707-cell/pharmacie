@@ -65,7 +65,6 @@ class ProduitsActivity : AppCompatActivity() {
         val btnTraitement = menu.findViewById<Button>(R.id.btn_traitement)
         val btnProfil = menu.findViewById<Button>(R.id.btn_profil)
 
-        // 🔥 Active menu
         setActiveMenu(btnProduits)
 
         fab.setOnClickListener {
@@ -130,7 +129,6 @@ class ProduitsActivity : AppCompatActivity() {
         container.addView(view)
     }
 
-    // 🎯 animation
     private fun slide() {
         overridePendingTransition(
             android.R.anim.slide_in_left,
@@ -138,7 +136,6 @@ class ProduitsActivity : AppCompatActivity() {
         )
     }
 
-    // 🔥 menu active cleaner way
     private fun setActiveMenu(activeButton: Button) {
 
         val menu = findViewById<View>(R.id.bottomMenu)

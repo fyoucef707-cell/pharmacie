@@ -15,7 +15,6 @@ class AccueilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_accueil)
 
-        // ================= UI =================
         val btnAccueil = findViewById<Button>(R.id.btnAccueil)
         val btnCarte = findViewById<Button>(R.id.btnCarte)
         val btnCommande = findViewById<Button>(R.id.btnCommande)
@@ -23,7 +22,6 @@ class AccueilActivity : AppCompatActivity() {
 
         val searchInput = findViewById<EditText>(R.id.searchInput)
 
-        // ================= SEARCH =================
         searchInput.setOnEditorActionListener { _, actionId, _ ->
 
             if (actionId == EditorInfo.IME_ACTION_SEARCH ||
@@ -38,16 +36,13 @@ class AccueilActivity : AppCompatActivity() {
             } else false
         }
 
-        // ================= ACTIVE BUTTON =================
         setActive(btnAccueil)
 
-        // ================= NAVIGATION =================
         btnCarte.setOnClickListener { openPage(MapsActivity::class.java) }
         btnCommande.setOnClickListener { openPage(CommandeActivity::class.java) } // ✅ مصححة
-        btnProfil.setOnClickListener { openPage(ProfilActiviti::class.java) } // ✅ مصححة
+        btnProfil.setOnClickListener { openPage(ProfilActivity::class.java) } // ✅ مصححة
     }
 
-    // ================= SEARCH LOGIC =================
     private fun handleSearch(query: String) {
 
         when (query.lowercase()) {
@@ -59,7 +54,7 @@ class AccueilActivity : AppCompatActivity() {
                 openPage(CommandeActivity::class.java)
 
             "profil", "profile" ->
-                openPage(ProfilActiviti::class.java)
+                openPage(ProfilActivity::class.java)
 
             else ->
                 openPage(MapsActivity::class.java)
@@ -72,7 +67,7 @@ class AccueilActivity : AppCompatActivity() {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 
-    // ================= ACTIVE BUTTON =================
+
     private fun setActive(activeBtn: Button) {
 
         val green = ContextCompat.getColor(this, R.color.green)

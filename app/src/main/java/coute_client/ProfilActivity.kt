@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
-class ProfilActiviti : AppCompatActivity() {
+class ProfilActivity : AppCompatActivity() {
 
     private fun openPage(activity: Class<*>) {
         val intent = Intent(this, activity)

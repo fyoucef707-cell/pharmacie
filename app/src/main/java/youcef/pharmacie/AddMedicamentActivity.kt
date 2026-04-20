@@ -20,7 +20,6 @@ class AddMedicamentActivity : AppCompatActivity() {
 
         val btnAjouter = findViewById<Button>(R.id.btnAjouter)
 
-        // 🔹 EDIT MODE
         val oldNom = intent.getStringExtra("nom")
         val oldDesc = intent.getStringExtra("desc")
         val oldPrix = intent.getStringExtra("prix")
@@ -33,7 +32,6 @@ class AddMedicamentActivity : AppCompatActivity() {
             etStock.setText(oldStock)
         }
 
-        // 🔹 ADD / SAVE
         btnAjouter.setOnClickListener {
 
             val nom = etNom.text.toString().trim()
@@ -41,7 +39,6 @@ class AddMedicamentActivity : AppCompatActivity() {
             val desc = etDesc.text.toString().trim()
             val stock = etStock.text.toString().trim()
 
-            // ❌ منع القيم الفارغة
             if (nom.isEmpty() || prix.isEmpty()) {
                 Toast.makeText(this, "Remplir les champs obligatoires", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener

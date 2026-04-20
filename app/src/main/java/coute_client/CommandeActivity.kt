@@ -36,7 +36,7 @@ class CommandeActivity : AppCompatActivity() {
         }
 
         btnProfil.setOnClickListener {
-            openPage(ProfilActiviti::class.java)
+            openPage(ProfilActivity::class.java)
         }
     }
 }

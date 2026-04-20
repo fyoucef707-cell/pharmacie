@@ -30,11 +30,9 @@ class pharmacieProfile : AppCompatActivity() {
         val btnProfil = bottomMenu.findViewById<Button>(R.id.btn_profil)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
 
-        // 💚 highlight current page (Profil)
         val greenColor = ContextCompat.getColor(this, R.color.green)
         btnProfil.setTextColor(greenColor)
 
-        // 🔥 logout
         btnLogout.setOnClickListener {
             Toast.makeText(this, "Déconnexion...", Toast.LENGTH_SHORT).show()
 
@@ -44,7 +42,6 @@ class pharmacieProfile : AppCompatActivity() {
             finish()
         }
 
-        // 🔵 navigation (same style openPage)
         btnVentes.setOnClickListener {
             openPage(DashboardActivity::class.java)
         }

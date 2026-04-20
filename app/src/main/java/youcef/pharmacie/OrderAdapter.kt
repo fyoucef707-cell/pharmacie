@@ -14,7 +14,6 @@ data class Order(
     val time: String
 )
 
-// ✅ Adapter واحد فقط
 class OrderAdapter(
     private val orders: List<Order>,
     private val onAction: (Order, String) -> Unit

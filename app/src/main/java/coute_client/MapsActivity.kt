@@ -37,7 +37,6 @@ class MapsActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_maps)
 
-        // ================= MAP =================
         map = findViewById(R.id.map)
 
         map.setTileSource(TileSourceFactory.MAPNIK)
@@ -48,10 +47,8 @@ class MapsActivity : AppCompatActivity() {
             setCenter(pharmacy)
         }
 
-        // ================= MARKER =================
         addMarker(pharmacy, "Pharmacie")
 
-        // ================= SEARCH =================
         val searchInput = findViewById<EditText>(R.id.searchInput)
 
         searchInput.setOnEditorActionListener { _, _, _ ->
@@ -59,7 +56,6 @@ class MapsActivity : AppCompatActivity() {
             true
         }
 
-        // ================= MENU =================
         findViewById<Button>(R.id.btnAccueil).setOnClickListener {
             openPage(AccueilActivity::class.java)
         }
@@ -73,10 +69,9 @@ class MapsActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnProfil).setOnClickListener {
-            openPage(ProfilActiviti::class.java)
+            openPage(ProfilActivity::class.java)
         }
 
-        // ================= LOCATION BUTTON =================
         val btnMyLocation = findViewById<FloatingActionButton>(R.id.btnMyLocation)
 
         btnMyLocation.setOnClickListener {
@@ -84,11 +79,9 @@ class MapsActivity : AppCompatActivity() {
                 ?: Toast.makeText(this, "GPS not ready", Toast.LENGTH_SHORT).show()
         }
 
-        // ================= GPS =================
         requestLocation()
     }
 
-    // ================= SEARCH =================
     private fun searchLocation(query: String) {
         when {
             query.contains("pharmacie", true) -> {
@@ -98,7 +91,6 @@ class MapsActivity : AppCompatActivity() {
         }
     }
 
-    // ================= MAP ACTIONS =================
     private fun moveTo(point: GeoPoint, title: String) {
         map.controller.animateTo(point)
         map.controller.setZoom(17.0)
@@ -114,7 +106,6 @@ class MapsActivity : AppCompatActivity() {
         map.invalidate()
     }
 
-    // ================= GPS =================
     private fun requestLocation() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -141,7 +132,6 @@ class MapsActivity : AppCompatActivity() {
         map.overlays.add(locationOverlay)
     }
 
-    // ================= NAV =================
     private fun openPage(activity: Class<*>) {
         startActivity(Intent(this, activity))
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)

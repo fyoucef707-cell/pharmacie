@@ -29,7 +29,6 @@ class DashboardActivity : AppCompatActivity() {
         val btnTraitement = bottomMenu.findViewById<Button>(R.id.btn_traitement)
         val btnProfil = bottomMenu.findViewById<Button>(R.id.btn_profil)
 
-        // 🎯 ACTIVE MENU (Ventes)
         setActiveMenu(btnVentes)
 
         btnVentes.setOnClickListener {
@@ -56,7 +55,6 @@ class DashboardActivity : AppCompatActivity() {
         overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
     }
 
-    // 💚 CLEAN MENU (TEXT COLOR like ProfilActiviti)
     private fun setActiveMenu(active: Button) {
 
         val btnVentes = findViewById<Button>(R.id.btn_ventes)
