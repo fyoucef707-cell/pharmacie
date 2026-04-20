@@ -65,6 +65,14 @@ class tratmentActivity : AppCompatActivity() {
         val btnTraitement = findViewById<Button>(R.id.btn_traitement)
         val btnProfil = findViewById<Button>(R.id.btn_profil)
 
+        val green = ContextCompat.getColor(this, R.color.green)
+        val gray = ContextCompat.getColor(this, android.R.color.darker_gray)
 
+        btnVentes.setTextColor(gray)
+        btnProduits.setTextColor(gray)
+        btnTraitement.setTextColor(gray)
+        btnProfil.setTextColor(gray)
+
+        active.setTextColor(green)
     }
 }
