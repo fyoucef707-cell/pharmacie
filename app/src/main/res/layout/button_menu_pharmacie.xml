@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/bottomMenu"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Ventes -->
+    <Button
+        android:id="@+id/btn_ventes"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Ventes"
+        android:drawableTop="@drawable/document_scanner_24dp_000000_fill0_wght400_grad0_opsz24"
+        android:background="@android:color/transparent"
+        android:textSize="12sp"
+        android:textColor="#A08F8F"
+        android:tint="@null"/>
+
+    <!-- Produits -->
+    <Button
+        android:id="@+id/btn_produits"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Produits"
+        android:drawableTop="@drawable/pill_24dp_000000_fill0_wght700_grad200_opsz24"
+        android:background="@android:color/transparent"
+        android:textSize="12sp"
+        android:textColor="#A08F8F" />
+
+    <!-- Traitements -->
+    <Button
+        android:id="@+id/btn_traitement"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Traitements"
+        android:drawableTop="@drawable/medication_24dp_000000_fill0_wght400_grad0_opsz24"
+        android:background="@android:color/transparent"
+        android:textSize="12sp"
+        android:textColor="#8E7A7A" />
+
+    <!-- Profil -->
+    <Button
+        android:id="@+id/btn_profil"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Profil"
+        android:drawableTop="@drawable/user_attributes_24dp_000000_fill0_wght400_grad0_opsz24"
+        android:background="@android:color/transparent"
+        android:textSize="12sp"
+        android:textColor="#A08F8F" />
+
+</LinearLayout>

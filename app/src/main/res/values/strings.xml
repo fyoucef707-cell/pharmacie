@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name_alt">MyApplication</string>
+    <string name="title_activity_commande">commande</string>
+    <string name="title_activity_tratment">tratmentActivity</string>
+</resources>
