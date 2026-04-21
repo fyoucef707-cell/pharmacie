@@ -14,14 +14,15 @@ class tratmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tratment)
 
-        val btnAccept1: Button = findViewById(R.id.btnAccept1)
-        val btnRefuse1: Button = findViewById(R.id.btnRefuse1)
+        // ⚠️ safer: check if exist
+        val btnAccept1 = findViewById<Button?>(R.id.btnAccept1)
+        val btnRefuse1 = findViewById<Button?>(R.id.btnRefuse1)
 
-        btnAccept1.setOnClickListener {
+        btnAccept1?.setOnClickListener {
             Toast.makeText(this, "CMD #125 accepté", Toast.LENGTH_SHORT).show()
         }
 
-        btnRefuse1.setOnClickListener {
+        btnRefuse1?.setOnClickListener {
             Toast.makeText(this, "CMD #125 refusé", Toast.LENGTH_SHORT).show()
         }
 
@@ -55,15 +56,20 @@ class tratmentActivity : AppCompatActivity() {
     }
 
     private fun slide() {
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        overridePendingTransition(
+            android.R.anim.slide_in_left,
+            android.R.anim.slide_out_right
+        )
     }
 
     private fun setActiveMenu(active: Button) {
 
-        val btnVentes = findViewById<Button>(R.id.btn_ventes)
-        val btnProduits = findViewById<Button>(R.id.btn_produits)
-        val btnTraitement = findViewById<Button>(R.id.btn_traitement)
-        val btnProfil = findViewById<Button>(R.id.btn_profil)
+        val bottomMenu = findViewById<View>(R.id.bottomMenu)
+
+        val btnVentes = bottomMenu.findViewById<Button>(R.id.btn_ventes)
+        val btnProduits = bottomMenu.findViewById<Button>(R.id.btn_produits)
+        val btnTraitement = bottomMenu.findViewById<Button>(R.id.btn_traitement)
+        val btnProfil = bottomMenu.findViewById<Button>(R.id.btn_profil)
 
         val green = ContextCompat.getColor(this, R.color.green)
         val gray = ContextCompat.getColor(this, android.R.color.darker_gray)

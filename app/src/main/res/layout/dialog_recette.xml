@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="12dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💰 Recette du jour"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#111"/>
+
+        <!-- TOTAL -->
+        <TextView
+            android:id="@+id/totalRecette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 DA"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginTop="16dp"/>
+
+        <!-- VENTES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 Ventes :"
+                android:textColor="#555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/nbVentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:layout_marginStart="6dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- BENEFICE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 Bénéfice :"
+                android:textColor="#555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/benefice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 DA"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:layout_marginStart="6dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- BUTTON -->
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Fermer"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

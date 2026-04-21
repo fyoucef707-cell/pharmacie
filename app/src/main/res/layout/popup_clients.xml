@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="#2196F3"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- AVATAR -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:src="@drawable/account_circle_24dp_000000_fill0_wght400_grad0_opsz24__1_"
+            android:background="#FFFFFF"
+            android:padding="6dp"
+            android:scaleType="centerInside"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/clientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ahmed"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#111"/>
+
+            <TextView
+                android:id="@+id/clientPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0770 11 22 33"
+                android:textSize="13sp"
+                android:textColor="#777"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/circular_forward_next_arrow_right_icon_258769"
+            android:tint="#999"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
