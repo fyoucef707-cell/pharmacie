@@ -1,4 +1,4 @@
-package coute_client
+package youcef.pharmacie
 
 import android.R
 import android.content.Intent

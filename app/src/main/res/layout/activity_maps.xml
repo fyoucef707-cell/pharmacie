@@ -39,6 +39,26 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- DISTANCE DISPLAY (NEW) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="90dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance: -- km"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LOCATION BUTTON -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnMyLocation"
             android:layout_width="wrap_content"

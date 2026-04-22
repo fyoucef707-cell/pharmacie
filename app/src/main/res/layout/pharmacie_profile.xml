@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="#F4F6F8">
 
-    <!-- TOP SECTION -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,7 +13,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- AVATAR -->
         <ImageView
             android:id="@+id/ivUserAvatar"
             android:layout_width="110dp"
@@ -23,7 +21,6 @@
             android:src="@drawable/market"
             android:background="#FFFFFF"            android:padding="10dp"/>
 
-        <!-- NAME -->
         <TextView
             android:id="@+id/tvUserName"
             android:layout_width="wrap_content"
@@ -35,7 +32,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"/>
 
-        <!-- STATUS -->
         <TextView
             android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
@@ -46,7 +42,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="6dp"/>
 
-        <!-- CARD INFO -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +86,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- LOGOUT -->
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
@@ -104,7 +98,6 @@
 
     </LinearLayout>
 
-    <!-- BOTTOM MENU -->
     <include
         android:id="@+id/bottomMenu"
         layout="@layout/button_menu_pharmacie"/>

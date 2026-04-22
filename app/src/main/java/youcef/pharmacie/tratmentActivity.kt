@@ -14,7 +14,6 @@ class tratmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tratment)
 
-        // ⚠️ safer: check if exist
         val btnAccept1 = findViewById<Button?>(R.id.btnAccept1)
         val btnRefuse1 = findViewById<Button?>(R.id.btnRefuse1)
 

@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="#F4F6F8">
 
-    <!-- TOP SECTION -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,7 +13,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- TITLE -->
         <TextView
             android:id="@+id/titleDashboard"
             android:layout_width="wrap_content"
@@ -24,7 +22,6 @@
             android:textStyle="bold"
             android:textColor="#111" />
 
-        <!-- STATS ROW -->
         <LinearLayout
             android:id="@+id/statsRow"
             android:layout_width="match_parent"
@@ -32,7 +29,6 @@
             android:orientation="horizontal"
             android:layout_marginTop="18dp">
 
-            <!-- REVENUE CARD -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/recetteCard"
                 android:layout_width="0dp"
@@ -69,7 +65,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- CLIENT CARD -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/clientCard"
                 android:layout_width="0dp"
@@ -106,7 +101,6 @@
 
         </LinearLayout>
 
-        <!-- CLIENTS LIST (HIDDEN) -->
         <LinearLayout
             android:id="@+id/clientsSection"
             android:layout_width="match_parent"
@@ -129,7 +123,6 @@
                 android:layout_height="180dp"/>
         </LinearLayout>
 
-        <!-- RECETTE DETAILS (HIDDEN) -->
         <LinearLayout
             android:id="@+id/recetteSection"
             android:layout_width="match_parent"
@@ -161,7 +154,6 @@
                 android:textColor="#555"/>
         </LinearLayout>
 
-        <!-- ANALYTICS -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -221,7 +213,6 @@
 
     </LinearLayout>
 
-    <!-- BOTTOM MENU -->
     <include
         android:id="@+id/bottomMenu"
         layout="@layout/button_menu_pharmacie"

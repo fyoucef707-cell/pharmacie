@@ -23,11 +23,9 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vente)
 
-        // ================= TEXT =================
         findViewById<TextView>(R.id.titleDashboard).text = "Tableau de bord"
         findViewById<TextView>(R.id.tvRecette).text = "12 590 DA"
 
-        // ================= MENU =================
         val bottomMenu = findViewById<LinearLayout>(R.id.bottomMenu)
 
         btnVentes = bottomMenu.findViewById(R.id.btn_ventes)
@@ -52,7 +50,6 @@ class DashboardActivity : AppCompatActivity() {
             slide()
         }
 
-        // ================= CLIENTS =================
         val clientCard = findViewById<CardView>(R.id.clientCard)
         val clientsSection = findViewById<LinearLayout>(R.id.clientsSection)
         val listClients = findViewById<ListView>(R.id.listClients)
@@ -86,7 +83,6 @@ class DashboardActivity : AppCompatActivity() {
                 if (clientsSection.visibility == View.GONE) View.VISIBLE else View.GONE
         }
 
-        // ================= RECETTE POPUP =================
         val recetteCard = findViewById<CardView>(R.id.recetteCard)
 
         recetteCard.setOnClickListener {
@@ -121,7 +117,7 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
 
-    // ================= UTIL =================
+
 
     private fun slide() {
         overridePendingTransition(

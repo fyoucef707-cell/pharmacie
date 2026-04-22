@@ -30,8 +30,7 @@ class ProduitsActivity : AppCompatActivity() {
 
         setActiveMenu(btnProduits)
 
-        // ✅ ADD PRODUCT (POPUP)
-        fab.setOnClickListener {
+          fab.setOnClickListener {
             editingView = null
             showAddEditDialog()
         }
@@ -56,7 +55,6 @@ class ProduitsActivity : AppCompatActivity() {
         }
     }
 
-    // 🔥 POPUP ADD / EDIT
     private fun showAddEditDialog(
         viewToEdit: View? = null,
         oldNom: String = "",
@@ -73,7 +71,6 @@ class ProduitsActivity : AppCompatActivity() {
         val etStock = dialogView.findViewById<EditText>(R.id.etPosologie)
         val btnAjouter = dialogView.findViewById<Button>(R.id.btnAjouter)
 
-        // fill if edit
         etNom.setText(oldNom)
         etDesc.setText(oldDesc)
         etPrix.setText(oldPrix)
@@ -107,7 +104,6 @@ class ProduitsActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    // ➕ ADD PRODUCT
     private fun addProduit(nom: String, desc: String, prix: String, stock: String) {
 
         val view = layoutInflater.inflate(R.layout.item_produit, container, false)

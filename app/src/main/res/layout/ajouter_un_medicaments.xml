@@ -16,7 +16,6 @@
         android:gravity="center"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Nom -->
     <EditText
         android:id="@+id/etNom"
         android:layout_width="match_parent"
@@ -28,7 +27,6 @@
         android:padding="12dp"
         android:layout_marginBottom="10dp"/>
 
-    <!-- Prix -->
     <EditText
         android:id="@+id/etPrix"
         android:layout_width="match_parent"
@@ -41,7 +39,6 @@
         android:padding="12dp"
         android:layout_marginBottom="10dp"/>
 
-    <!-- Description -->
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
@@ -55,7 +52,6 @@
         android:padding="12dp"
         android:layout_marginBottom="10dp"/>
 
-    <!-- Stock -->
     <EditText
         android:id="@+id/etPosologie"
         android:layout_width="match_parent"
@@ -68,7 +64,6 @@
         android:padding="12dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Button -->
     <Button
         android:id="@+id/btnAjouter"
         android:layout_width="match_parent"
