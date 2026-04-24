@@ -1,40 +1,33 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
     namespace = "com.example.pharmaconnect"
-    compileSdk = 36
-    buildFeatures {
-        viewBinding = true
-    }
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.pharmaconnect"
         minSdk = 30
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        targetSdk = 34
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-
+    buildFeatures {
+        viewBinding = true
+        compose = true
+        dataBinding = false
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1" // Utilise 1.5.1 pour Kotlin 1.9.0
+        kotlinCompilerExtensionVersion = "1.5.14"
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
@@ -42,12 +35,16 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(platform(libs.androidx.compose.bom))
+
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+
     implementation("org.osmdroid:osmdroid-android:6.1.18")
-    implementation("androidx.compose.material3:material3:1.2.0")
-    implementation("androidx.compose.ui:ui:1.6.0")
+    implementation(libs.play.services.analytics.impl)
+
+    debugImplementation("androidx.compose.ui:ui-tooling")
 }

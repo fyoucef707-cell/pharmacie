@@ -12,34 +12,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PharmaConnect" >
         <activity
-            android:name=".AccuilActivity1"
-            android:exported="false" />
+            android:name=".AccueilActivity1"
+            android:exported="true" />
+
         <activity
             android:name=".Ninth"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
         <activity
             android:name=".EighthPage"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".koli"
+            android:exported="true" />
         <activity
             android:name=".SeventhPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SixPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".FifthPage"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true" />
         <activity
             android:name=".FourthPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MapsActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
